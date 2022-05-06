@@ -9,7 +9,19 @@
     <div id="CSCanvas"></div>
 
     <script id="csdraw" type="text/x-cindyscript">
-      colorplot( [#.x, #.y, (1+sin(seconds()))/2 ] );
+        N=100;
+        colorplot(
+            c = complex(mouse());
+            z = complex(#);
+            n = 0;
+            r = 0; //remainder
+            repeat(N,k,
+                if(|z| <= 10,
+                  z=z*z+c;
+                  n = k;
+                  );
+            );
+            if(n==N,grey(0),hue(n/N)));
     </script>
 
     <script type="text/javascript">
@@ -21,7 +33,7 @@
         width: 500,
         height: 500,
         transform: [{
-          visibleRect: [0, 1, 1, 0]
+          visibleRect: [-1, 1, 1, -1]
         }]
       }]
     });

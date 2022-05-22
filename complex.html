@@ -12,7 +12,7 @@
       f(z) := (tan(z)/z^i); //a complex function
       colorize(z) := (
         n = 12; //highlight 12 different phases
-        z1 = log(z)/(2*pi)+0*seconds()/25+seconds()/25;
+        z1 = log(z)/(2*pi);
         zfract = n*z1 - floor(n*z1); //n*z in C mod Z[i]
         factor = (.6+.4*re(sqrt(im(zfract)*re(zfract))));
         hue(arctan2(z)/(2*pi))*factor; //darken hue with f

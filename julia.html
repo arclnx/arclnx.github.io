@@ -12,12 +12,13 @@
         N=100;
         colorplot(
             c = complex(A);
+            b=complex(B);
             z = complex(#);
             n = 0;
             r = 0; //remainder
             repeat(N,k,
                 if(|z| <= 10,
-                  z=z^2+c;
+                  z=z^b+c;
                   n = k;
                   );
             );

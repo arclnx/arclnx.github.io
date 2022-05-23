@@ -11,13 +11,13 @@
     <script id="csdraw" type="text/x-cindyscript">
         N=100;
         colorplot(
-            c = complex(mouse());
-            z = complex(A);
+            c = complex(A);
+            z = complex(#);
             n = 0;
             r = 0; //remainder
             repeat(N,k,
                 if(|z| <= 10,
-                  z=z*z+c;
+                  z=z^2+c;
                   n = k;
                   );
             );
@@ -29,7 +29,8 @@
       scripts: "cs*",
       autoplay: true,
       geometry: [
-        {name:"A", kind:"P", type:"Free", pos:[0,0]}
+        {name:"A", kind:"P", type:"Free", pos:[-1,0]},
+        {name:"B", kind:"P", type:"Free", pos:[1,0]}
       ],
       ports: [{
         id: "CSCanvas",
@@ -38,7 +39,7 @@
         transform: [{
           visibleRect: [-2, 2, 2, -2]
         }]
-      }]
+      }],
       
     });
     </script>

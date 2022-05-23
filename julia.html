@@ -28,6 +28,9 @@
     CindyJS({
       scripts: "cs*",
       autoplay: true,
+      geometry: [
+        {name:"A", kind:"P", type:"Free", pos:[0,0]}
+      ],
       ports: [{
         id: "CSCanvas",
         width: 700,
@@ -35,10 +38,8 @@
         transform: [{
           visibleRect: [-2, 2, 2, -2]
         }]
-      }],
-      geometry: [
-        {name:"A", kind:"P", type:"Free", pos:[0,0]}
-      ]
+      }]
+      
     });
     </script>
   </body>

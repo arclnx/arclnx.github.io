@@ -12,7 +12,7 @@
         N=100;
         colorplot(
             c = complex(mouse());
-            z = complex(#);
+            z = complex(A);
             n = 0;
             r = 0; //remainder
             repeat(N,k,
@@ -35,7 +35,10 @@
         transform: [{
           visibleRect: [-2, 2, 2, -2]
         }]
-      }]
+      }],
+      geometry: [
+        {name:"A", kind:"P", type:"Free", pos:[0,0]}
+      ]
     });
     </script>
   </body>

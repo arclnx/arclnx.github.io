@@ -11,14 +11,14 @@
     <script id="csdraw" type="text/x-cindyscript">
         N=100;
         colorplot(
-            c = complex(A);
-            b=complex(B);
+            a = complex(A);
+            b = complex(B);
             z = complex(#);
             n = 0;
             r = 0; //remainder
             repeat(N,k,
-                if(|z| <= 10,
-                  z=z^b+c;
+                if(|b| <= 25,
+                  b=b^2+z;
                   n = k;
                   );
             );

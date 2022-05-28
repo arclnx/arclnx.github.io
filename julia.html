@@ -9,7 +9,7 @@
     <div id="CSCanvas"></div>
 
     <script id="csdraw" type="text/x-cindyscript">
-        N=100;
+        N=1000;
         colorplot(
             a = complex(A);
             b = complex(B);
@@ -19,11 +19,10 @@
             repeat(N,k,
                 if(|z| <= 25,
                   z=z^2+b;
-                  b=a+z;
                   n = k;
                   );
             );
-            if(n==N,grey(0),hue(n/N)));
+            if(n==N,grey(0),hue(n/N*2)));
     </script>
 
     <script type="text/javascript">

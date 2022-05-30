@@ -1,8 +1,12 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
 h1 {
-    color: red;
+    color: rgb(31, 44, 84);
 }
 
 ul {
     font-style: italic;
-    color: red
+    color: lightseagreen
 }

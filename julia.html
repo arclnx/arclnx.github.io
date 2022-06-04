@@ -27,23 +27,25 @@
     </script>
 
     <script type="text/javascript">
-    CindyJS({
-      scripts: "cs*",
-      autoplay: true,
-      geometry: [
-        {name:"A", kind:"P", type:"Free", pos:[-1,0]},
-        {name:"B", kind:"P", type:"Free", pos:[1,0]}
-      ],
-      ports: [{
-        id: "CSCanvas",
-        width: 700,
-        height: 700,
-        transform: [{
-          visibleRect: [-2, 2, 2, -2]
-        }]
-      }],
-      
-    });
+      var width = window.innerWidth
+      var height = window.innerHeight
+      CindyJS({
+        scripts: "cs*",
+        autoplay: true,
+        geometry: [
+          {name:"A", kind:"P", type:"Free", pos:[-1,0]},
+          {name:"B", kind:"P", type:"Free", pos:[1,0]}
+        ],
+        ports: [{
+          id: "CSCanvas",
+          width: width,
+          height: height,
+          transform: [{
+            visibleRect: [-2, 2, 2, -2]
+          }]
+        }],
+        
+      });
     </script>
   </body>
 </html>
